@@ -1,5 +1,34 @@
 <!Doctype HTML>
+<html>
+<head>
+    <title>Sort.by</title>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script> 
+
+</head>
+
 <body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $(".fancybox").fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none',
+          iframe : {
+           autoplay: true,
+
+           preload: true
+            }
+          });
+        });
+
+      function closeFancyboxAndRedirectToUrl(url){
+        $.fancybox.close();
+        window.location = url;
+      }
+    </script>
+
 <p>Do you like:<p>
   <form>
     <div>
@@ -49,7 +78,7 @@
       <input type="radio" name="9" >No
     </div> 
     <div>
-      <label for="10">Giving instructions for/or directing a play?</label>
+      <label for="10">Playing with electronic gadgets?</label>
       <input type="radio" name="10">Yes
       <input type="radio" name="10" >No
     </div> 
@@ -57,7 +86,8 @@
 
   <div>
     <button>
-      <a href="survey_3.html">Submit</a>
+      <a class="fancybox" data-fancybox-type="iframe" href="static/5_b.jpg" onclick="parent.closeFancyboxAndRedirectToUrl('survey_3.html');">Next</a>
     </button>
   </div>
 </body>
+</hmtl>
