@@ -15,18 +15,17 @@
         $(".fancybox").fancybox({
           openEffect  : 'none',
           closeEffect : 'none',
-          iframe : {
-           autoplay: true,
+          iframe: {
+           autoplay:true,
 
            preload: true
+    //        afterClose  : function() {
+    //    location.href = "survey_3.html";
+    // }
             }
           });
         });
 
-      function closeFancyboxAndRedirectToUrl(url){
-        $.fancybox.close();
-        window.location = url;
-      }
     </script>
 
 <p>Do you like:<p>
@@ -79,14 +78,14 @@
     </div> 
     <div>
       <label for="10">Playing with electronic gadgets?</label>
-      <input type="radio" name="10">Yes
-      <input type="radio" name="10" >No
+      <a class="fancybox" rel="group" data-fancybox-type="iframe" href="static/Halfwaythere1.gif"><input type="radio" name="10">Yes</a>
+      <a class="fancybox" rel="group" data-fancybox-type="iframe" href="static/halfwaythere1.gif"><input type="radio" name="10" >No</a>
     </div> 
   </form>
 
   <div>
-    <button>
-      <a class="fancybox" data-fancybox-type="iframe" href="static/5_b.jpg" onclick="parent.closeFancyboxAndRedirectToUrl('survey_3.html');">Next</a>
+    <button> 
+      <a href="survey_3.html">Submit</a>
     </button>
   </div>
 </body>
